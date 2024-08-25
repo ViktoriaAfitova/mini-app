@@ -10,12 +10,23 @@ const LanguageSwitcher = () => {
 
   return (
     <div>
-      <button className={style.button} type='button' onClick={() => changeLanguage('en')}>En</button>
+      <button
+        className={style.button}
+        type='button'
+        onClick={() => changeLanguage('en')}
+      >
+        en
+      </button>
       <span>/</span>
-      <button className={style.button} type='button' onClick={() => changeLanguage('ru')}>Ру</button>
+      <button
+        className={style.button}
+        type='button'
+        onClick={() => changeLanguage('ru')}
+      >
+        ру
+      </button>
     </div>
   );
 };
 
 export default LanguageSwitcher;
-

@@ -19,16 +19,14 @@ const icons: { [key: string]: string } = {
   pisces: '🐟',
 };
 
-export const ZodiacPreview = ({ 
-  sign,
-  description = '',
-  period 
-}: Props) => {
+export const ZodiacPreview = ({ sign, description = '', period }: Props) => {
   const { t } = useTranslation();
 
   return (
     <div className={style.card}>
-      <h3 className={style.name}>{t(`zodiac.${sign}`, sign)} {icons[sign]}</h3>
+      <h3 className={style.name}>
+        {t(`zodiac.${sign}`, sign)} {icons[sign]}
+      </h3>
       <small className={style.period}>{t(`period.${period}`, period)}</small>
       {description && <p className={style.description}>{description}</p>}
     </div>

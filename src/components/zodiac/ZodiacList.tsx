@@ -22,5 +22,3 @@ export const ZodiacList = ({ zodiacSigns, selectedZodiac }: Props) => {
     </div>
   );
 };
-
-

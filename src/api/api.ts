@@ -14,7 +14,7 @@ api.interceptors.response.use(
   (response: AxiosResponse) => response,
   (error) => {
     return Promise.reject(error);
-  }
+  },
 );
 
 const mapHoroscopeData = (data: HoroscopeResponse): ZodiacSign[] => {
@@ -25,20 +25,19 @@ const mapHoroscopeData = (data: HoroscopeResponse): ZodiacSign[] => {
   }));
 };
 
-export const getHoroscope = async (): Promise<ZodiacSign[] | null> => {
+export const getHoroscope = async (
+  language: string,
+): Promise<ZodiacSign[] | null> => {
   try {
+    const selectedLanguage = language === 'ru' ? 'original' : language;
+
     const response = await api.post('/get_horoscope/', {
-      language: 'original',
+      language: selectedLanguage,
       period: 'today',
     });
 
-    console.log('API Response:', response.data); 
-
     return mapHoroscopeData(response.data);
-  } catch (error) {
+  } catch {
     throw new Error('Failed to fetch horoscope data');
   }
 };
-
-
-
