@@ -16,7 +16,7 @@ export const ZodiacList = ({ zodiacSigns, selectedZodiac }: Props) => {
           className={style.card}
           onClick={() => selectedZodiac(zodiac)}
         >
-          <ZodiacPreview sign={zodiac.sign} period={zodiac.period} />
+          <ZodiacPreview sign={zodiac.sign} />
         </div>
       ))}
     </div>

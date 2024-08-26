@@ -6,5 +6,5 @@ export interface HoroscopeResponse {
 export interface ZodiacSign {
   sign: string;
   description?: string;
-  period: string;
+  period?: string;
 }

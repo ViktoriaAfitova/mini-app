@@ -4,7 +4,7 @@ import { ZodiacSign } from '../../api/types/types';
 
 type Props = Pick<ZodiacSign, 'sign' | 'description' | 'period'>;
 
-const icons: { [key: string]: string } = {
+const ICONS: { [key: string]: string } = {
   aries: '🐏',
   taurus: '🐂',
   gemini: '👯‍♂️',
@@ -22,12 +22,17 @@ const icons: { [key: string]: string } = {
 export const ZodiacPreview = ({ sign, description = '', period }: Props) => {
   const { t } = useTranslation();
 
+  const dateRange = t(`dataRange.${sign}`, '');
+
   return (
     <>
       <h3 className={style.sign}>
-        {t(`zodiac.${sign}`, sign)} {icons[sign]}
+        {t(`zodiac.${sign}`, sign)} {ICONS[sign]}
       </h3>
-      <small className={style.period}>{t(`period.${period}`, period)}</small>
+      <small className={style.period}>{dateRange}</small>
+      {period && (
+        <small className={style.period}>{t(`period.${period}`, period)}</small>
+      )}
       {description && <p className={style.description}>{description}</p>}
     </>
   );
