@@ -6,10 +6,11 @@ import { ZodiacSign } from '../../api/types/types';
 
 type Props = {
   zodiacSigns: ZodiacSign[];
+  className?: string;
   onClose: () => void;
 };
 
-export const ZodiacDetails = ({ zodiacSigns, onClose }: Props) => {
+export const ZodiacDetails = ({ zodiacSigns, className, onClose }: Props) => {
   const { t } = useTranslation();
 
   const handlers = useSwipeable({
@@ -24,7 +25,7 @@ export const ZodiacDetails = ({ zodiacSigns, onClose }: Props) => {
   const zodiac = zodiacSigns[0];
 
   return (
-    <div className={style.details} {...handlers}>
+    <div className={className} {...handlers}>
       <button type='button' className={style.backButton} onClick={onClose}>
         {t('Back')}
       </button>

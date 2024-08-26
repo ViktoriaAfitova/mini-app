@@ -9,11 +9,11 @@ type Props = {
 
 export const ZodiacList = ({ zodiacSigns, selectedZodiac }: Props) => {
   return (
-    <div className={style.card}>
+    <div className={style.cardsList}>
       {zodiacSigns.map((zodiac) => (
         <div
           key={zodiac.sign}
-          className={style.item}
+          className={style.card}
           onClick={() => selectedZodiac(zodiac)}
         >
           <ZodiacPreview sign={zodiac.sign} period={zodiac.period} />

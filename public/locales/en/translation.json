@@ -2,6 +2,7 @@
   "Loading": "Loading...",
   "Error": "Failed to load zodiac signs",
   "NoData": "No zodiac signs available",
+  "NoSignSelected": "No zodiac sign selected",
   "Back": "Back",
   "zodiac": {
     "aries": "Aries",

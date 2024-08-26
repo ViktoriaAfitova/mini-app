@@ -1,56 +1,92 @@
-.card {
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+};
+
+.cardsList {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 10px;
-}
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
+  .card {
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 8px; 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0)); 
 
-.details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    &:hover {
+      transform: scale(1.05); 
+      color: #f0f0f0; 
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); 
+      border-color: rgba(255, 255, 255, 0.5); 
+    };
+
+    .sign {
+      font-size: 20px; 
+      margin: 0;
+      font-weight: 500; 
+    };
+
+    .period {
+      color: #aaa; 
+      font-size: 14px; 
+    };
+  };
+};
+
+.cardDetails {
   width: 100%;
-  padding: 20px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.backButton {
-  background-color: #0078ff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-bottom: 20px;
-  align-self: flex-start;
-}
-
-.item {
-  background: #f2f2f2;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 15px;
-  width: 200px;
-  text-align: center;
-  cursor: pointer;
-}
-
-.name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: 18px;
-  margin: 0;
-}
+  font-weight: 500;
+  line-height: 1.5; 
+  padding: 0.5rem 1rem;
+  transition: color 0.3s, transform 0.3s;
+  border-radius: 8px; 
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
+  border: 1px solid rgba(255, 255, 255, 0.2); 
 
-.period {
-  color: #666;
-}
+  .sign {
+    font-size: 20px; 
+    margin: 0;
+    font-weight: 600; 
+  };
+
+  .period {
+    color: #aaa; 
+    font-size: 16px; 
+  };
+
+  .description {
+    color: #888;
+  };
+
+  .backButton {
+    background-color: #0078ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    align-self: flex-start;
+    transition: background-color 0.3s, transform 0.3s;
+
+    &:hover {
+      background-color: #005bb5;
+    };
+  };
+};
+

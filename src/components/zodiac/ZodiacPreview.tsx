@@ -23,12 +23,12 @@ export const ZodiacPreview = ({ sign, description = '', period }: Props) => {
   const { t } = useTranslation();
 
   return (
-    <div className={style.card}>
-      <h3 className={style.name}>
+    <>
+      <h3 className={style.sign}>
         {t(`zodiac.${sign}`, sign)} {icons[sign]}
       </h3>
       <small className={style.period}>{t(`period.${period}`, period)}</small>
       {description && <p className={style.description}>{description}</p>}
-    </div>
+    </>
   );
 };

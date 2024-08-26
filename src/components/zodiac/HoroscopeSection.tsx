@@ -60,9 +60,10 @@ export const HoroscopeSection = () => {
   }
 
   return (
-    <div className={style.container}>
+    <div className={style.section}>
       {selectedZodiac ? (
         <ZodiacDetails
+          className={style.cardDetails}
           zodiacSigns={[selectedZodiac]}
           onClose={handleCloseDetails}
         />

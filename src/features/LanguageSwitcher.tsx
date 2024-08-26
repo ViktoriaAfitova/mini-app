@@ -9,7 +9,7 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <div>
+    <div className={style.container}>
       <button
         className={style.button}
         type='button'
@@ -17,7 +17,7 @@ const LanguageSwitcher = () => {
       >
         en
       </button>
-      <span>/</span>
+      <span className={style.separator}>/</span>
       <button
         className={style.button}
         type='button'

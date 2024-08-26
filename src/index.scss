@@ -2,14 +2,20 @@
   font-family: 'Nunito';
   src: url('./assets/fonts/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf')
     format('ttf');
-}
+};
 
 body {
-  background-color: #fff;
-  margin: 0;
-  padding: 0;
-  color: #39414b;
+  background-color: #000;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px),
+                    radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px),
+                    radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px),
+                    radial-gradient(circle, rgba(255,255,255,0.3) 1px, transparent 1px);
+  background-size: 200px 200px, 150px 150px, 100px 100px, 50px 50px;
+  background-position: 0 0, 50px 50px, 100px 100px, 150px 150px;
+  color: #FFF;
   font-family: 'Nunito', sans-serif;
   font-size: 18px;
   font-weight: 800;
-}
+  margin: 0;
+  padding: 0;
+};
